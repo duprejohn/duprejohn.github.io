@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#02aab0"/><stop offset="1" stop-color="#00cdac"/></linearGradient></defs>
+<rect width="1200" height="750" fill="url(#g)"/>
+<g font-family="Montserrat, Helvetica, Arial, sans-serif" fill="#fff">
+<text x="90" y="150" font-size="34" font-weight="700" letter-spacing="6" opacity="0.85">TELEHEALTH</text>
+<text x="90" y="380" font-size="200" font-weight="800">15x</text>
+<text x="96" y="450" font-size="48" font-weight="600">telehealth volume</text>
+<rect x="96" y="500" width="120" height="6" fill="#fff" opacity="0.7"/>
+<text x="96" y="580" font-size="38" font-weight="600">Conversion up 65% (2020–2025)</text>
+<text x="96" y="640" font-size="30" opacity="0.9">Launched nationwide in the first weeks of COVID-19</text>
+</g></svg>

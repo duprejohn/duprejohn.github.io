@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#02aab0"/><stop offset="1" stop-color="#00cdac"/></linearGradient></defs>
+<rect width="600" height="600" fill="url(#g)"/>
+<text x="300" y="360" text-anchor="middle" font-family="Montserrat, Helvetica, Arial, sans-serif" font-size="200" font-weight="800" fill="#fff">JD</text></svg>
