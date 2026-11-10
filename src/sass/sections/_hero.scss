@@ -176,5 +176,11 @@
         opacity: 0;
       }
     }
+
+    // Reduce Motion: swap words with a fade, no sliding
+    &.is-fade .word-rotator__word {
+      transform: none;
+      transition: opacity 0.6s ease;
+    }
   }
 }

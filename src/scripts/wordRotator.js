@@ -1,5 +1,5 @@
 // Flips through the words in .word-rotator, one at a time, sliding up.
-// Without JavaScript (or with reduced motion) only the first word shows.
+// Without JavaScript only the first word shows. With Reduce Motion on, words fade instead of slide.
 // The width is only pinned during a flip (so it can animate); otherwise it sizes to the
 // active word naturally, which avoids clipping before the web font loads.
 export default function initWordRotator() {
@@ -8,10 +8,11 @@ export default function initWordRotator() {
 
   rotators.forEach((rotator) => {
     const words = [...rotator.querySelectorAll(".word-rotator__word")];
-    if (words.length < 2 || reduceMotion) return;
+    if (words.length < 2) return;
 
     let current = 0;
     rotator.classList.add("is-ready");
+    if (reduceMotion) rotator.classList.add("is-fade");
 
     setInterval(() => {
       const leaving = words[current];
