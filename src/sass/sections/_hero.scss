@@ -73,6 +73,7 @@
   @include respond(phone) {
     display: block;
     width: auto !important;
+    font-size: 0.9em; // so "digital fundraising" fits on 375px-wide phones
   }
 
   &__word {
