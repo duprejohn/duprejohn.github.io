@@ -13,7 +13,41 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  // Diagonal bands above and below the hero text. Both use the same --hero-slope (the drop
+  // across the full width), so the two edges are always at exactly the same angle.
+  --hero-slope: min(20vw, 16vh);
+  --hero-band: min(4.5rem, 7vh);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: calc(var(--hero-band) + var(--hero-slope));
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    background: $primary-color;
+    clip-path: polygon(0 0, 100% 0, 100% var(--hero-band), 0 calc(var(--hero-band) + var(--hero-slope)));
+  }
+
+  &::after {
+    bottom: 0;
+    background: $secondary-color;
+    clip-path: polygon(0 var(--hero-slope), 100% 0, 100% 100%, 0 100%);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
 
   // Set position sticky so the jumbotron stays fixed while you scroll.
   // position: sticky;
@@ -68,6 +102,7 @@
   position: relative;
   vertical-align: bottom;
   white-space: nowrap;
+  line-height: inherit;
 
   // On phones the word gets its own line, so the rest of the sentence never jumps
   @include respond(phone) {
@@ -77,6 +112,7 @@
 
   &__word {
     display: none;
+    vertical-align: top; // no extra gap above the word on phones
 
     &.is-active {
       display: inline-block;
@@ -86,6 +122,9 @@
   // Once the script runs, words stack in one slot and slide up into place
   &.is-ready {
     overflow: hidden;
+    // room for descenders (the "g" in "scheduling") inside the clipped box
+    padding-bottom: 0.15em;
+    margin-bottom: -0.15em;
     transition: width 0.6s ease;
 
     .word-rotator__word {
