@@ -19,6 +19,13 @@
       padding-bottom: 5rem;
     }
 
+    &__placeholder {
+      width: 100%;
+      max-width: 48rem;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+
     &__image {
       display: flex;
       height: 100%;
