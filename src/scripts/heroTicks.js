@@ -1,4 +1,5 @@
-// Draws ruler ticks along the slanted inner edges of the hero bands (see _hero.scss).
+// Draws ruler ticks along the slanted inner edges of the hero bands (see _hero.scss),
+// and sets --hero-angle so the hero text can be skewed to match the edges.
 // Each tick is perpendicular to its edge. The band sizes come from the same CSS variables
 // the bands use (--hero-band, --hero-slope), read through probe elements so they always match.
 const SPACING = 12; // px between ticks, measured along the edge
@@ -23,6 +24,8 @@ function draw(hero, svg) {
   const ux = Math.cos(theta), uy = -Math.sin(theta); // along the edge
   const nx = Math.sin(theta), ny = Math.cos(theta); // perpendicular to it (down-right)
   const edgeLength = Math.hypot(w, slope);
+  // The hero text is skewed to this same angle (see .container in _hero.scss)
+  hero.style.setProperty("--hero-angle", `${-theta}rad`);
 
   svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
   let lines = "";
