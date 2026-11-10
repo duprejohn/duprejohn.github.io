@@ -29,6 +29,8 @@ Every change to this site gets checked against this list before it's pushed. Las
 - **Focus ring:** set explicitly in `sass/base/_base.scss`, because the template's gradient text is transparent,
   which made the browser's default ring invisible.
 
-## Known gap
-- **Resume PDF** (`src/assets/resume.pdf`) is not a tagged PDF, so screen readers read it as plain text without
-  headings or structure. An HTML or tagged version would fix this.
+## Resume
+- **`src/resume.html`** is the accessible version of the resume (real headings, lists, landmarks, skip link).
+  It's generated from the job-search repo: `python3 scripts/portfolio_resume.py`. Rebuild it whenever the resume changes,
+  alongside `src/assets/resume.pdf`, so the two always match.
+- The PDF itself is untagged (screen readers get flat text), which is why the About section links both.
