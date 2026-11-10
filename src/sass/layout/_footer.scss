@@ -8,11 +8,12 @@
   }
 
   &__text {
-    color: darken($white-color, 50%);
+    color: #b3b3b3; // 6:1 on the footer gray (WCAG AA needs 4.5:1)
     font-size: 1.3rem;
 
     a {
-      color: darken($white-color, 50%);
+      color: #b3b3b3;
+      text-decoration: underline;
       font-size: 1.3rem;
       transition: all 0.4s;
       display: inline-block;
@@ -20,7 +21,7 @@
 
       &:hover,
       &:active {
-        color: $primary-color;
+        color: $white-color;
         -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
       }
@@ -55,6 +56,15 @@
       transform: translateY(-2px);
     }
   }
+}
+
+.back-to-top {
+  // 44px target so it's easy to hit (WCAG 2.5.8 asks for at least 24px)
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.4rem;
+  min-height: 4.4rem;
 }
 
 .back-to-top i {

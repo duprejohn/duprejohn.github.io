@@ -35,6 +35,8 @@
   <body>
     <div id="top"></div>
 
+    <!-- Main landmark; white backing so the content sections' angled edges show white, not the navy page background -->
+    <main class="page-content">
     <!-- **** Hero Section **** -->
     <section id="hero" class="jumbotron">
       <div class="container">
@@ -42,26 +44,30 @@
           Oh hey. I'm <span class="text-color-main">John</span>.
           <br />
           I specialize in making complex systems in
-          <span class="word-rotator" data-interval="2600">
+          <span class="visually-hidden">healthcare, patient access, telehealth, online scheduling and fundraising</span>
+          <span class="word-rotator" data-interval="2600" aria-hidden="true">
             <span class="word-rotator__word text-color-main is-active">healthcare</span>
-            <span class="word-rotator__word text-color-main" aria-hidden="true">patient access</span>
-            <span class="word-rotator__word text-color-main" aria-hidden="true">telehealth</span>
-            <span class="word-rotator__word text-color-main" aria-hidden="true">online scheduling</span>
-            <span class="word-rotator__word text-color-main" aria-hidden="true">fundraising</span>
+            <span class="word-rotator__word text-color-main">patient access</span>
+            <span class="word-rotator__word text-color-main">telehealth</span>
+            <span class="word-rotator__word text-color-main">online scheduling</span>
+            <span class="word-rotator__word text-color-main">fundraising</span>
           </span>
           easy for everyone.
         </h1>
         <p class="hero-cta">
-          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
-            >Learn more</a
+          <a class="cta-btn cta-btn--hero" href="#about"
+            >Learn more<span class="visually-hidden"> about me</span></a
           >
+          <!-- WCAG 2.2.2: moving content needs a way to pause it -->
+          <button type="button" class="rotator-toggle" aria-pressed="false" hidden>
+            <i class="fa fa-pause" aria-hidden="true"></i>
+            <span class="rotator-toggle__label visually-hidden">Pause animation</span>
+          </button>
         </p>
       </div>
     </section>
     <!-- /END Hero Section -->
 
-    <!-- White backing for the content sections; their angled edges show this, not the navy page background -->
-    <main class="page-content">
     <!-- **** About Section **** -->
     <section id="about">
       <div class="container">
@@ -103,7 +109,7 @@
                   class="cta-btn cta-btn--resume"
                   href="assets/resume.pdf"
                 >
-                  View Resume
+                  View Resume<span class="visually-hidden"> (opens in a new tab)</span>
                 </a>
               </span>
             </div>
@@ -255,7 +261,7 @@
                   class="cta-btn text-color-main"
                   href="https://github.com/duprejohn/agent.cv"
                 >
-                  Source Code
+                  Source Code<span class="visually-hidden"> (opens in a new tab)</span>
                 </a>
               </div>
             </div>
@@ -265,6 +271,8 @@
                   rel="noreferrer"
                   href="https://github.com/duprejohn/agent.cv"
                   target="_blank"
+                  tabindex="-1"
+                  aria-hidden="true"
                 >
                   <div
                     data-tilt
@@ -304,7 +312,7 @@
             target="_blank"
             class="cta-btn cta-btn--resume"
             href="https://www.linkedin.com/in/duprejohn"
-            >Let's talk</a
+            >Let's talk<span class="visually-hidden"> (opens in a new tab)</span></a
           >
         </div>
       </div>
@@ -315,7 +323,7 @@
     <!-- **** Footer Section **** -->
     <footer class="footer navbar-static-bottom">
       <div class="container">
-        <a rel="noreferrer" href="#top" class="back-to-top">
+        <a href="#top" class="back-to-top" aria-label="Back to top">
           <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
         </a>
         <div class="social-links">
@@ -323,17 +331,17 @@
             rel="noreferrer"
             href="https://www.linkedin.com/in/duprejohn"
             target="_blank"
-            aria-label="LinkedIn"
+            aria-label="LinkedIn (opens in a new tab)"
           >
-            <i class="fa fa-linkedin fa-inverse"></i>
+            <i class="fa fa-linkedin fa-inverse" aria-hidden="true"></i>
           </a>
           <a
             rel="noreferrer"
             href="https://github.com/duprejohn"
             target="_blank"
-            aria-label="GitHub"
+            aria-label="GitHub (opens in a new tab)"
           >
-            <i class="fa fa-github fa-inverse"></i>
+            <i class="fa fa-github fa-inverse" aria-hidden="true"></i>
           </a>
         </div>
 
@@ -342,7 +350,7 @@
         <p class="footer__text">
           © 2026 John DuPre · Template by
           <a rel="noreferrer" href="https://github.com/cobiwave" target="_blank"
-            >Jacobo Martínez</a
+            >Jacobo Martínez<span class="visually-hidden"> (opens in a new tab)</span></a
           >
         </p>
       </div>

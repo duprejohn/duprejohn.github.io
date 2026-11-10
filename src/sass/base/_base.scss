@@ -34,3 +34,17 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: $primary-color;
 }
+
+// Keyboard focus ring (WCAG 2.4.7). The template's gradient text is transparent, which made the
+// browser's default ring invisible, so every focusable thing gets an explicit ring.
+:focus-visible {
+  outline: 3px solid $primary-color;
+  outline-offset: 3px;
+}
+#about,
+#contact,
+.footer {
+  :focus-visible {
+    outline-color: $white-color;
+  }
+}
