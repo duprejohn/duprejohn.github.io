@@ -1,15 +1,23 @@
 html {
   font-size: 62.5%;
+}
 
-  &.sr .load-hidden {
-    visibility: hidden;
-  }
+// Navy page background: Safari 26 on iPhone tints its browser bar from this (it ignores the
+// theme-color meta tag that older Safari and Chrome use). It also colors the pull-down overscroll.
+html,
+body {
+  background-color: $primary-color;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   scroll-behavior: smooth;
+}
+
+.page-content {
+  display: block;
+  background-color: $white-color;
 }
 
 /* Scrollbar */
