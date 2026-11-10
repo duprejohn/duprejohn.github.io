@@ -72,7 +72,8 @@
     position: relative;
     z-index: 2;
     // Baselines follow the band edges; letters stay upright. --hero-angle is set by heroTicks.js
-    transform: skewY(var(--hero-angle, 0rad));
+    // --hero-text-shift centers the text between the slanted bands (both set by heroTicks.js)
+    transform: translateY(var(--hero-text-shift, 0px)) skewY(var(--hero-angle, 0rad));
     transform-origin: left center;
   }
 
