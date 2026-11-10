@@ -61,3 +61,46 @@
     }
   }
 }
+
+// Rotating word in the hero ("complex systems in healthcare / nonprofits / ...")
+.word-rotator {
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+  white-space: nowrap;
+
+  &__word {
+    display: none;
+
+    &.is-active {
+      display: inline-block;
+    }
+  }
+
+  // Once the script runs, words stack in one slot and slide up into place
+  &.is-ready {
+    overflow: hidden;
+    transition: width 0.6s ease;
+
+    .word-rotator__word {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+
+      &.is-active {
+        position: relative;
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      &.is-leaving {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+    }
+  }
+}
