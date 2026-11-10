@@ -16,6 +16,8 @@ export default function initWordRotator() {
     rotator.classList.add("is-ready");
     fitTo(words[current]);
     window.addEventListener("resize", () => fitTo(words[current]));
+    // Re-measure once the web font loads; the first measurement uses the fallback font
+    if (document.fonts) document.fonts.ready.then(() => fitTo(words[current]));
 
     setInterval(() => {
       const leaving = words[current];

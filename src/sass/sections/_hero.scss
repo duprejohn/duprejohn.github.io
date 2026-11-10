@@ -69,6 +69,12 @@
   vertical-align: bottom;
   white-space: nowrap;
 
+  // On phones the word gets its own line, so the rest of the sentence never jumps
+  @include respond(phone) {
+    display: block;
+    width: auto !important;
+  }
+
   &__word {
     display: none;
 
