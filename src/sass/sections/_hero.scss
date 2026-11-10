@@ -1,6 +1,8 @@
 #hero {
+  // Fill the visible screen. svh = the height with the phone's browser bars showing, so both
+  // bands are on screen at load; vh is the fallback for older browsers.
   min-height: 100vh;
-  height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   border-bottom: 0px;
@@ -81,7 +83,8 @@
   background-size: cover; */
 
   @include respond(phone) {
-    padding: 0rem $default-font-size;
+    // Keep the text clear of the bands on short phones; the hero grows instead of overlapping
+    padding: calc(var(--hero-band) + var(--hero-slope) + 1.2rem) $default-font-size;
   }
 
   .hero-title {
@@ -98,7 +101,8 @@
     }
     @include respond(phone) {
       font-size: 3.5rem;
-      line-height: 1.5;
+      line-height: 1.3;
+      margin-bottom: 2.4rem;
     }
     @include respond(phone-xs) {
       font-size: 2.8rem;
