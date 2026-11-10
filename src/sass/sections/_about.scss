@@ -1,10 +1,6 @@
 #about {
-  background-color: $primary-color;
-  background-image: linear-gradient(
-    135deg,
-    $primary-color 0%,
-    $secondary-color 100%
-  );
+  // Solid sky, so the hero's bottom band flows straight into this section with no seam
+  background-color: $secondary-color;
   color: $white-color;
   height: 100%;
   border-top: 0px;
