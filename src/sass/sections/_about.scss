@@ -77,6 +77,20 @@
           }
         }
       }
+
+      &-list {
+        align-self: stretch;
+        padding-left: 1.25em;
+        text-align: left;
+
+        @include respond(tab-port-sm) {
+          text-align: left;
+        }
+
+        li {
+          margin-bottom: 0.25rem;
+        }
+      }
     }
   }
 }
