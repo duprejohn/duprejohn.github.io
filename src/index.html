@@ -116,8 +116,8 @@
               <li>Measure and discover what comes next</li>
             </ul>
           </div>
-          <!-- Phones: photo first; desktop (md and up): photo below both columns -->
-          <div class="col-12 order-first order-md-last">
+          <!-- Phones only: the photo is the About header image. On desktop it sits at the bottom of the page (Contact). -->
+          <div class="col-12 order-first d-md-none">
             <div class="about-wrapper__image">
               <img
                 alt="White letter dice spelling DUPRE and JOHN"
@@ -339,6 +339,17 @@
             href="https://www.linkedin.com/in/duprejohn"
             >Connect via LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a
           >
+        </div>
+        <!-- Desktop only (md and up); on phones this photo is the About header image -->
+        <div class="contact-photo d-none d-md-flex">
+          <img
+            alt="White letter dice spelling DUPRE and JOHN"
+            class="img-fluid contact-photo__img"
+            width="899"
+            height="539"
+            loading="lazy"
+            src="assets/about-dice.png"
+          />
         </div>
       </div>
     </section>

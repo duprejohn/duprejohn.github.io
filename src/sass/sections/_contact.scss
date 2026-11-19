@@ -37,3 +37,15 @@
     }
   }
 }
+
+// Letter-dice photo at the bottom of the page on desktop (John, 2026-11-19)
+.contact-photo {
+  justify-content: center;
+  margin-top: 6.4rem;
+
+  &__img {
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+  }
+}

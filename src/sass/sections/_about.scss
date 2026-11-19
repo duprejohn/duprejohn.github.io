@@ -72,9 +72,6 @@
       align-items: center;
       justify-content: center;
 
-      @media (min-width: 48em) {
-        margin-top: 4.8rem;
-      }
 
       @include respond(tab-land) {
         height: 100%;
