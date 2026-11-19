@@ -52,10 +52,6 @@
       justify-content: center;
       flex-direction: column;
 
-      @include respond(tab-port-sm) {
-        align-items: center;
-      }
-
       &-text {
         text-align: left;
 
@@ -63,7 +59,7 @@
           text-align: left;
         }
         @include respond(tab-port-sm) {
-          text-align: center;
+          text-align: left;
         }
 
         &--important {
