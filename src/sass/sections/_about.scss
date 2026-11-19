@@ -99,6 +99,7 @@
         }
 
         li {
+          font-size: $default-font-size; // match the paragraphs (root is 62.5%, so list text was tiny)
           margin-bottom: 0.25rem;
         }
       }
