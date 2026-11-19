@@ -26,6 +26,14 @@
       aspect-ratio: 16 / 9;
     }
 
+    &__photo {
+      width: 100%;
+      max-width: 36rem;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      background-color: $white-color;
+    }
+
     &__image {
       display: flex;
       height: 100%;
