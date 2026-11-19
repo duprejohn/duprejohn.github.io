@@ -40,15 +40,18 @@
     &__col {
       text-align: left;
 
+      // Mirror the spacing around the divider: outer edges keep the normal gutter,
+      // inner edges get 3.2rem, so both columns are the same width.
+      @media (min-width: 48em) {
+        padding-right: 3.2rem;
+      }
+
       &--divided {
         @media (min-width: 48em) {
           border-left: 1px solid rgba($white-color, 0.6);
           padding-left: 3.2rem;
+          padding-right: calc(var(--bs-gutter-x) * 0.5);
         }
-      }
-
-      @media (min-width: 48em) {
-        padding-right: 3.2rem;
       }
     }
 
