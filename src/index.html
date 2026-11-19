@@ -71,8 +71,12 @@
     <!-- **** About Section **** -->
     <section id="about">
       <div class="container">
+        <a class="scroll-caret" href="#about">
+          <i class="fa fa-angle-down" aria-hidden="true"></i
+          ><span class="visually-hidden">Scroll to About me</span>
+        </a>
         <h2 class="section-title">About me</h2>
-        <div class="d-flex flex-wrap gap-3 about-actions">
+        <div class="d-flex flex-wrap justify-content-center gap-3 about-actions">
           <a class="cta-btn cta-btn--resume" href="resume.html">
             View resume<span class="visually-hidden"> as a web page</span>
           </a>
@@ -99,6 +103,9 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="about-wrapper__info">
+              <h3 class="about-wrapper__subheading">
+                I make complex systems easy for everyone to use.
+              </h3>
               <p class="about-wrapper__info-text">
                 I'm a digital product leader and director with 20 years in
                 digital health and consumer tech. For seven years at Planned
@@ -108,7 +115,7 @@
                 led product for creative tools (Animoto), fitness (SoulCycle),
                 and entertainment industry (The Orchard, now Sony Music).
               </p>
-              <p class="about-wrapper__info-text mb-2">How I work:</p>
+              <h3 class="about-wrapper__subheading">How I work</h3>
               <ul class="about-wrapper__info-text about-wrapper__info-list">
                 <li>Ask the right questions, including the ones some are afraid to ask</li>
                 <li>Gather real user evidence</li>
@@ -135,6 +142,55 @@
       <div class="container">
         <div class="project-wrapper">
           <h2 class="section-title dark-blue-text">Selected work</h2>
+
+          <!-- Project: Virtual Health Centers -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">
+                  Virtual Health Centers
+                </h3>
+                <div>
+                  <p class="mb-4">
+                    Led research, design, development and cross-vendor
+                    implementation of the patient experience for Planned
+                    Parenthood Virtual Health Centers: 31 centers across 24
+                    states, launched in 2024 and now a key source of patient
+                    acquisition and revenue for affiliates. Recognized with a
+                    <a
+                      class="text-link"
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://www.anthemawards.com/winners/list/entry/#!health/service/planned-parenthood-virtual-health-centers/1973/-1/533646"
+                      >2024 Anthem Award (Gold)<span class="visually-hidden"> (opens in a new tab)</span></a
+                    >.
+                  </p>
+                  <p class="award-badge">
+                    <i class="fa fa-trophy" aria-hidden="true"></i>
+                    Anthem Award · Gold · 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image">
+                <div
+                  data-tilt
+                  data-tilt-max="4"
+                  data-tilt-glare="true"
+                  data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt"
+                >
+                  <img
+                    alt="Virtual Health Centers: 31 centers in 24 states, 2024 Anthem Award Gold"
+                    class="img-fluid"
+                    src="assets/project-vhc.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
 
           <!-- Project: online scheduling -->
           <div class="row">
@@ -213,45 +269,6 @@
           </div>
           <!-- /END Project -->
 
-          <!-- Project: Virtual Health Centers -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">
-                  Virtual Health Centers
-                </h3>
-                <div>
-                  <p class="mb-4">
-                    Led research, design, development and cross-vendor
-                    implementation of the patient experience for Planned
-                    Parenthood Virtual Health Centers: 31 centers across 24
-                    states, launched in 2024 and now a key source of patient
-                    acquisition and revenue for affiliates. Recognized with a
-                    2024 Anthem Award (Gold).
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image">
-                <div
-                  data-tilt
-                  data-tilt-max="4"
-                  data-tilt-glare="true"
-                  data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt"
-                >
-                  <img
-                    alt="Virtual Health Centers: 31 centers in 24 states, 2024 Anthem Award Gold"
-                    class="img-fluid"
-                    src="assets/project-vhc.svg"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /END Project -->
-
           <!-- Project: agent.cv -->
           <div class="row">
             <div class="col-lg-4 col-sm-12">
@@ -323,7 +340,7 @@
             target="_blank"
             class="cta-btn cta-btn--resume"
             href="https://www.linkedin.com/in/duprejohn"
-            >Let's talk<span class="visually-hidden"> (opens in a new tab)</span></a
+            >Connect and/or chat via LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a
           >
         </div>
       </div>

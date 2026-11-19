@@ -76,3 +76,28 @@
     }
   }
 }
+
+// Inline text link inside project copy (underlined so it isn't color-only, WCAG 1.4.1)
+#projects .text-link {
+  color: $primary-color;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+
+  &:hover,
+  &:focus-visible {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// Award badge under the Virtual Health Centers copy
+#projects .award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid $primary-color;
+  border-radius: 0.4rem;
+  color: $primary-color;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
