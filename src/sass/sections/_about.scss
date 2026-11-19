@@ -15,6 +15,14 @@
     clip-path: none;
   }
 
+  .section-title {
+    margin-bottom: 1.6rem;
+  }
+
+  .about-actions {
+    margin-bottom: 4rem;
+  }
+
   .about-wrapper {
     @include respond(phone) {
       padding-bottom: 5rem;
